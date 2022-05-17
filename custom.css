@@ -1,0 +1,15 @@
+.icon-green {
+    color: #00CA4E;
+}
+
+.icon-yellow {
+    color: #FFFF00;
+}
+
+.icon-red {
+    color: #FF605c;
+}
+
+.devDude {
+    background-image: url("dev_dude.svg");
+}
