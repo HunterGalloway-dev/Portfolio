@@ -1,22 +1,10 @@
 
 import './App.css';
-import Browser from './browser/browser';                                                                                                                                                        
+import Main from './components/Main/Main.js'                                                                                                                                              
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hunter Galloway</h1>                                                                                        
-      <div class="container">
-
-        <div class="row">
-          <Browser />
-          <Browser />
-          <Browser />
-          <Browser />
-        </div>
-
-    </div>
-    </div>
+    <Main />
   );
 }
 
