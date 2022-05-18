@@ -1,0 +1,17 @@
+.sticky-nav {
+    height: 100%;
+}
+
+.logo {
+    height: 3vh;
+}
+
+#dash {
+    animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

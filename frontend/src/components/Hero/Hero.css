@@ -1,0 +1,77 @@
+.hero {
+    height: 90vh
+}
+
+.hero-header {
+    font-size: 4vw;
+}
+
+.hero-subtitle {
+    font-size: 3vw;
+}
+
+.hero-text {
+    font-size: 2vw;
+}
+
+.dev-dude {
+    height: 100%;
+    margin-top: 1vh;
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(-5px)
+    }
+    100% {
+        transform: translatey(0px)
+    }
+}
+#mug {
+    animation: mug 3s;
+}
+
+@keyframes mug {
+    from {
+        transform: translateX(150%);
+    }
+}
+
+#background {
+    animation: drop-background 1s ease;
+}
+
+@keyframes drop-background {
+    from {
+        transform: translateY(-300%);
+    }
+}
+
+#computer, #laptop, #laptoplines {
+    animation: drop-equipment 2s ease;
+}
+
+@keyframes drop-equipment {
+    from {
+        transform: translateY(-500px)
+    }
+}
+
+
+
+#head, #chair, #torso, #hand {
+    animation: slide-person 3s ease;
+}
+
+@keyframes slide-person {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+#head::after {
+    animation: bob 3s ease infinite;
+}

@@ -4,8 +4,8 @@ import './Browser.css';
 import img from './student.jpg'
 
 
-
 const Browser = (props) => (
+
   <div className="col-md-6 col-sm-12 mb-3">
 
     <div className="card">
@@ -15,14 +15,17 @@ const Browser = (props) => (
             <i className="fa-solid fa-circle icon-yellow m-1"></i>
             <i className="fa-solid fa-circle icon-green m-1"></i>
             <div className="mx-auto card w-75 m-10">
-                Grade Application11
+                {props.project.title}
             </div>
-            <a href="github.com" className="fa fa-brands fa-github fa-2x link-dark link-no-style">
+            <a href={props.project.gitHub} target='_blank' className="fa fa-brands fa-github fa-2x link-dark link-no-style">
                 
             </a>
         </div>
         <div className="card-body p-0">
             <img src={img} className="img-fluid" alt="Project Screenshot"/>
+        </div>
+        <div className='card-footer'>
+          {props.project.shortDesc}
         </div>
     </div>
   </div>
