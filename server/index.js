@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 
 // Express app components
-const PORT = 3001;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Set up mongoose and MongoDB connection
