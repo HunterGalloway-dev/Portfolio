@@ -23,7 +23,7 @@ const Main = () => {
     const [project, setProject] = useState({})
 
     const setProjectModal = (project) => {
-        console.log('test')
+
         setProject(project)
         handleShow()
     }
@@ -36,7 +36,7 @@ const Main = () => {
                 result.forEach(project => {
                     project.tags.forEach(tag => tags.add(tag))
                 });
-                console.log(result)
+
                 if(filterTags.size > 0) {
                     result = result.filter(project => {
                         return [...filterTags].every(tag => {
@@ -44,8 +44,6 @@ const Main = () => {
                         })
                     })
                 }
-
-                console.log(result)
 
                 setTags(tags)
                 setProjects(result)

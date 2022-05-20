@@ -6,7 +6,7 @@ import img from './student.jpg'
 
 const Browser = (props) => {
   let project = props.project
-  console.log(project.imgURL)
+
   return (
   <div className="btn col-md-6 col-sm-12 mb-3 Browser" >
 
@@ -29,7 +29,7 @@ const Browser = (props) => {
         <div className='card-footer'>
           {project.shortDescription}
           <div>
-            {project.tags.map(tag => <span className='btn rounded-pill me-1 mb-1 btn-sm btn-dark'>{tag}</span>)}
+            {project.tags.map((tag,key) => <span key={key} className='btn rounded-pill me-1 mb-1 btn-sm btn-dark'>{tag}</span>)}
           </div>
         </div>
     </div>
