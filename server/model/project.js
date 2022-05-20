@@ -10,7 +10,19 @@ const dataSchema = new mongoose.Schema({
         type: String
     }
     ,
-    githubUrl: {
+    githubURL: {
+        required: true,
+        type: String
+    },
+    youtubeURL: {
+        required: true,
+        type: String
+    },
+    imgURL: {
+        required: true,
+        type: String
+    },
+    description: {
         required: true,
         type: String
     },

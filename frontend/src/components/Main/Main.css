@@ -1,0 +1,7 @@
+.tag-button:focus {
+    box-shadow: none;
+}
+
+.test {
+    width: 90%;
+}

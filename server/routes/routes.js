@@ -61,8 +61,12 @@ router.post('/project', (req, res) => {
     const project = new Project({
         title: req.body.title,
         shortDescription: req.body.shortDescription,
-        githubUrl: req.body.githubUrl,
-        tags: req.body.tags
+        githubURL: req.body.githubURL,
+        youtubeURL: req.body.youtubeURL,
+        imgURL: req.body.imgURL,
+        description: req.body.description,
+        tags: req.body.tags,
+
     })
 
     project.save((err, result) => {
@@ -83,6 +87,9 @@ function projectDTO(project) {
         title: project.title,
         shortDescription: project.shortDescription,
         githubUrl: project.githubUrl,
+        videoURL: project.videoURL,
+        imgURL: project.imgURL,
+        description: project.description,
         tags: project.tags
     }
 }
