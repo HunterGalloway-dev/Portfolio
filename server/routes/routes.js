@@ -56,6 +56,10 @@ function deleteTags(tags) {
     })
 }
 
+router.get('/login', (req,res) => {
+    console.log(req.query)
+})
+
 // Post Method
 router.post('/project', (req, res) => {
     const project = new Project({

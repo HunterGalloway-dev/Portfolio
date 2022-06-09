@@ -6,7 +6,7 @@ import Browser from '../Browser/Browser'
 import BrowserModal from '../BrowserModal/BrowserModal'
 import Hero from '../Hero/Hero';
 import Navbar from '../Navbar/Navbar'
-import { getAllProjects } from '../../context/Projects';
+import { getAllProjects } from '../../context/Context';
 import Wave from 'react-wavify'
 import Modal from 'react-bootstrap/Modal'
 
@@ -21,6 +21,7 @@ const Main = () => {
     const handleShow = () => setShow(true);
 
     const [project, setProject] = useState({})
+    const [loading, setLoading] = useState(true)
 
     const setProjectModal = (project) => {
 
@@ -47,6 +48,7 @@ const Main = () => {
 
                 setTags(tags)
                 setProjects(result)
+                setLoading(false)
             }
         })
 
@@ -76,8 +78,6 @@ const Main = () => {
 
     return(
     <div className="Main">
-
-            <Navbar />
             <Hero />
 
             <Wave fill='#6C63FF'
@@ -95,8 +95,10 @@ const Main = () => {
             </Modal>
                                                                  
             <div className="container-fluid text-center bg-primary">
+                
                 <div className="row py-5 text-white">
-                    <h1> &lt;Projects/&gt;</h1>
+                {loading ? <h1>Loading Projects....</h1> : <h1> &lt;Projects/&gt;</h1>}
+                    
                 </div>
                 <div className='mb-3'>
                     {[...tags].map((tag, key) => <button key={key} onClick={() => processFilter(tag)} className={getFilterTag(tag)}>{tag}</button>)}
